@@ -35,14 +35,14 @@ def get_latest_msg():
     msg = bot.getUpdates()[-1]["message"]["text"]
     return msg
 
-''' FOR TESTING'''
+''' FOR TESTING
 date_info = '2010-01-01'
 file_info = [x.name for x in blob_storage_connect('smartwatchdata', date_info)]
 bot.sendMessage(chat_id, "\n".join(file_info))
-
-
-
 '''
+
+
+
 def btn_show(msg):
     btn1 = BT(text = "1. Search", callback_data = "1")
     btn2 = BT(text = "2. Cancel", callback_data = "2")
@@ -53,19 +53,20 @@ def query_ans(msg):         #activated when btn is selected
     query_id = msg["id"]    #id of the selected btn
     query_data = msg["data"]
     if query_data == "1":
-        list_info = listToStr(blob_storage_connect('smartwatchdata'))
-        bot.answerCallbackQuery(query_id, text = list_info)        
+        #list_info = listToStr(blob_storage_connect('smartwatchdata'))
+        #bot.answerCallbackQuery(query_id, text = list_info)
+        bot.sendMessage(chat_id, "hi")     
     elif query_data == "2":
         bot.answerCallbackQuery(query_id, text = "okay bye")
 
 
-
-
-
 MessageLoop(bot, {'chat': btn_show, 'callback_query' : query_ans}).run_as_thread()
+
 while True:
     time.sleep(5)
 
+
+'''
 
  def handle(msg):
      content_type, chat_type, chat_id = telepot(glance.msg)
