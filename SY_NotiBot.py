@@ -16,6 +16,7 @@ from telepot.namedtuple import InlineKeyboardMarkup as MU
         (maybe by chat handler... still finding out about it)
     3) need to cut the blob file name by the watch number, filmed date & time (cutoff the "mp4")
     4) addtionally get the upload date & time(last modified attribute), and the size of each videos
+    5) use arg parser to flexibly switch between api servers
 '''
 
 
