@@ -16,12 +16,12 @@ from telepot.namedtuple import InlineKeyboardMarkup as MU
     - DONE -
     1)  need to make the query connection when the user chooses "other dates" & inputs the date
     2) need to cut the blob file name by the watch number, filmed date & time (cutoff the "mp4")
-
-    - DOING -
     3) optimize the chatbot for multi-users
 
+    - DOING -
+     4) use arg parser to flexibly switch between api servers
+    
     - TO DO -
-    4) use arg parser to flexibly switch between api servers
     5) need to load the dates of the blob folders to inlinekeyboard
     ?) addtionally query get the upload date & time(last modified attribute), and the size of each videos
 '''
